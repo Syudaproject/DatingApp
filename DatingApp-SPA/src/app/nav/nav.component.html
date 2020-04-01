@@ -10,11 +10,16 @@
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Message</a>
       </li>
-      <li *ngIf="loggedIn()" class="nav-item">
-        <a class="nav-link" (click)="logout()">Log Out</a>
-      </li>
     </ul>
     
+    <div *ngIf="loggedIn()">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" (click)="logout()">Log Out</a>
+        </li>
+      </ul>
+    </div>
+
     <div *ngIf="loggedIn()" class="dropdown">
       <a class="dropdown-toggle text-light">
         Welcome user
