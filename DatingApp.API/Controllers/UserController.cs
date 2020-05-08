@@ -38,11 +38,11 @@ namespace DatingApp.API.Controllers
             return Ok(userToReturn);
         }
 
-        [HttpGet]
+        [HttpPost]
         public async Task<IActionResult> Save(User user)
         {
             _repo.Add(user);
-             await _repo.SaveAll();
+            await _repo.SaveAll();
             return Ok();
         }
 
